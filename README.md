@@ -1,149 +1,57 @@
-# 真本事顾问 —— 你的 AI 职场军师
+# Zhenbenshi Advisor
 
-> "大多数人的职场困境，不是不够努力，而是在用错误的思维模式拼命。"
-> —— 孙煜征《真本事：从会工作到会赚钱》
+Career advice is only useful when it changes the underlying frame.
 
-这是一个基于畅销书《真本事》提炼的 AI 职场顾问提示词。它不只是一个聊天工具，而是一套**经过亚马逊、Meta、腾讯等顶级公司实战验证的思维操作系统**——帮你在职场的每一个关键决策点，用对框架、做对选择。
+This repository defines a tool-agnostic advisory skill built on the framework system behind 《真本事》. It is designed for questions about career choice, leverage, value creation, promotion, side income, money, and personal trajectory.
 
-**任何支持自定义系统提示的 AI 工具都可以使用。**
+## What This Skill Covers
 
----
+- diagnosing the real thinking trap
+- choosing the right framework for the problem
+- turning frameworks into concrete action
+- staying in the realm of agency instead of complaint
 
-## 如何使用
+## When To Use It
 
-### 方式一：网页版（无需安装）
+Use this skill when someone needs help with:
 
-直接访问 **[lizheng.ai/zbs](https://www.lizheng.ai/zbs)**，滚动到"AI 顾问"区域，开箱即用。
+- job and career decisions
+- promotion and compensation
+- side projects and monetization
+- value creation and leverage
+- financial thinking
+- escaping bad mental models around work
 
----
+## Core View
 
-### 方式二：Claude Desktop（一键安装）
+Most career advice fails because it stays too generic.
 
-在 Claude Desktop 的 Cowork 模式中粘贴以下链接：
+This skill starts from a different premise:
 
+- find the trap
+- match the right framework
+- prescribe concrete next actions
+
+That is why the repository includes both a canonical skill and a condensed framework reference.
+
+## Repository Structure
+
+```text
+.
+├── SKILL.md
+└── references/
+    ├── frameworks-summary.md
+    └── sources.md
 ```
-https://raw.githubusercontent.com/sunyuzheng/zhenbenshi-advisor/main/zhenbenshi-advisor.skill
-```
 
-安装后，在任意对话中 @ 真本事顾问即可调用。
+## Design Principle
 
----
+`SKILL.md` captures the advisory pattern.  
+`references/frameworks-summary.md` keeps the durable conceptual spine.  
+`references/sources.md` points back to the richer original materials.
 
-### 方式三：Claude.ai Projects（永久记忆）
+## Source Lineage
 
-1. 打开 [claude.ai](https://claude.ai) → 左侧栏 **Projects** → 新建或进入一个 Project
-2. 点击 **Project Instructions** → 粘贴 [SYSTEM_PROMPT.md](./SYSTEM_PROMPT.md) 的完整内容
-3. 之后在这个 Project 里的所有对话，都会自动带上顾问人格
+This skill was abstracted from the internal 《真本事》 advisor skill and its framework reference set.
 
----
-
-### 方式四：ChatGPT
-
-**Custom GPT（推荐，可分享给他人）：**
-1. 打开 [chatgpt.com](https://chatgpt.com) → 左侧 **Explore GPTs** → **Create**
-2. 切换到 **Configure** 标签 → 在 **Instructions** 框里粘贴 [SYSTEM_PROMPT.md](./SYSTEM_PROMPT.md) 的内容
-3. 保存后，每次打开这个 GPT 就是真本事顾问
-
-**自定义指令（影响所有对话）：**
-1. 右上角头像 → **Customize ChatGPT**
-2. 在 "How would you like ChatGPT to respond?" 一栏粘贴系统提示
-
----
-
-### 方式五：其他任意 AI 工具
-
-Gemini、Kimi、豆包、DeepSeek、Grok……所有支持"系统提示"或"角色设定"的工具，都可以直接把 [SYSTEM_PROMPT.md](./SYSTEM_PROMPT.md) 的内容粘贴进去。
-
-如果工具不支持系统提示，也可以在对话开头直接发送提示词内容，然后换行描述你的问题。
-
----
-
-## 怎么问才能得到更好的建议
-
-顾问给出的建议质量，**直接取决于你描述问题的完整度**。建议包含：
-
-| 要素 | 示例 |
-|------|------|
-| **你是谁** | 行业、职级、工作年限 |
-| **具体情况** | 发生了什么，已经尝试过什么 |
-| **你想要什么** | 最终目标是什么，最担心什么 |
-| **限制条件** | 时间、资源、不可改变的约束 |
-
-**模糊提问**（效果差）：
-> 我想升职，怎么办？
-
-**清晰提问**（效果好）：
-> 我在一家200人的互联网公司做产品经理，工作三年，去年和今年绩效都是B+，但两次晋升都被卡住了，上级说我"影响力不足"。我自认为项目交付没问题，但不擅长向上汇报。我希望在年底前晋升，目前不考虑跳槽。
-
----
-
-## 它能帮你做什么
-
-当你描述一个真实的职场问题，真本事顾问会自动启动**三步诊断**：
-
-**第一步：戳破思维盲区**
-
-三种让人原地打转的陷阱：
-- **客体思维**："老板不公平"、"大环境太差"—— 把所有问题推给外界
-- **固定型思维**："我天生不擅长这个"—— 用天赋论给自己设限
-- **打分思维**："他薪资比我高，所以他比我强"—— 用单一数字看复杂世界
-
-**第二步：匹配书中框架**
-
-| 你的困境 | 适用框架 |
-|---------|---------|
-| 要不要跳槽/换行业 | **道天地将法** |
-| 忙到飞起却不出成果 | **10%核心价值** |
-| 想升职加薪没门路 | **个人价值公式** |
-| 想做副业不知从何开始 | **手艺思维** |
-| 想实现财务自由 | **财务自由公式** |
-| 觉得自己没核心竞争力 | **核心能力 vs 具体技能** |
-| 和老板关系不好/没资源 | **杠杆原理** |
-
-**第三步：给出行动清单**
-
-具体到你明天就能做的 2-4 件事，不是"加油努力"这种废话。
-
----
-
-## 对话示例
-
-**你说：**
-> 我在公司做了5年数据分析，考核年年不错，但就是不升职。想做副业，又觉得自己没什么拿得出手的本事。
-
-**真本事顾问会这样帮你：**
-
-1. **诊断**：两个隐藏陷阱——"不升职是老板不公"是客体思维；"我没本事"是固定型思维
-2. **框架**：你5年积累的数据分析经验本身就是市场资产，问题不是"没本事"，而是你的价值还停在"投入层"（我做了X个报告），没升级到"成果层"（我帮公司节省了X万成本）
-3. **行动**：
-   - 下周周报里，把"完成了Q1数据报告"改成"Q1分析推动了X流程优化，预计年节省Y万元"
-   - 列出3个你比普通人更擅长的数据技能，找2个朋友问他们愿不愿意付费获取这种帮助
-   - 主动约上级聊一次，明确晋升标准，把"我要资源"讲成"我能带来增量回报"
-
----
-
-## 书中最颠覆认知的观点
-
-**"动物园的老虎 vs 丛林的老虎"**
-在大公司待久了，以为自己的能力值得高薪——其实离开平台，在真实市场上可能一文不值。定期在市场验证自己的价值，是保持竞争力的唯一方式。
-
-**"学阿拉伯语"的思想实验**
-花10年苦学阿拉伯语，但市场不需要——价值就是零。价值不等于难度，也不等于努力。
-
-**"嫡系是结果，不是原因"**
-信任和资源是用价值"挣"来的，不是靠拍马屁。先展示价值，"嫡系"地位自然到手。
-
-**"成功 ≈ 手艺 + 坚持"**
-当手艺质量足够高时，机会会主动找上门。安静把一件事做到极致，比到处社交更有效。
-
----
-
-## 关于作者
-
-孙煜征，前亚马逊、Meta、腾讯资深从业者。《真本事：从会工作到会赚钱》以他在中美顶级科技公司的实战经历为基础，系统拆解了从"会工作"到"会赚钱"之间被大多数人忽略的认知鸿沟。
-
-个人主页：[lizheng.ai](https://www.lizheng.ai)
-
----
-
-*这个顾问由作者基于书籍内容提炼创建，旨在帮助读者在日常工作中随时调用书中的思维框架。如果觉得有用，欢迎分享给朋友。*
+See [references/sources.md](references/sources.md) for the full lineage.
